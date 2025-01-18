@@ -14,6 +14,19 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+WITH_GMS ?= true
+TARGET_CORE_GMS ?= false
+
+ifeq ($(TARGET_CORE_GMS),true)
+TARGET_CORE_GMS_EXTRAS := true
+endif
+
+ifeq ($(WITH_GMS),true)
+ifeq ($(TARGET_CORE_GMS),false)
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+endif
+endif
+
 PRODUCT_NAME := lineage_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
@@ -21,6 +34,8 @@ PRODUCT_MODEL := M2007J20CG
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Qualcomm Snapdragon 732G" \
+    RisingMaintainer="BrainDead" \
     BuildDesc="surya_global-user 12 RKQ1.211019.001 V14.0.2.0.SJGMIXM release-keys" \
     BuildFingerprint=POCO/surya_global/surya:12/RKQ1.211019.001/V14.0.2.0.SJGMIXM:user/release-keys
 
