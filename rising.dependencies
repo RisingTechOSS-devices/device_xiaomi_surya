@@ -1,0 +1,26 @@
+[
+  {
+    "remote": "gitlab",
+    "repository": "RisingTechOSS-devices/vendor_xiaomi_surya",
+    "branch": "fifteen",
+    "target_path": "vendor/xiaomi/surya"
+  },
+  {
+    "remote": "github",
+    "repository": "RisingTechOSS-devices/kernel_xiaomi_surya",
+    "branch": "fifteen",
+    "target_path": "kernel/xiaomi/surya"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_hardware_xiaomi",
+    "branch": "lineage-22.1",
+    "target_path": "hardware/xiaomi"
+  },
+  {
+    "remote": "github",
+    "repository": "RisingTechOSS-devices/vendor_gcgop",
+    "branch": "fifteen",
+    "target_path": "vendor/gcgop"
+  }
+]
